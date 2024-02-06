@@ -137,7 +137,7 @@ class _ChatSectionState extends State<ChatSection> {
                           Icons.arrow_upward,
                           size: 10,
                         ),
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             shape: BoxShape.circle, color: Color(0xffFF006B)),
                       ),
                     ),
