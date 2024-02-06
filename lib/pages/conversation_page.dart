@@ -1,5 +1,6 @@
 // ignore_for_file: sort_child_properties_last
 
+import 'package:fl_chat_app/components/chat_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -51,6 +52,7 @@ class ConversatioPage extends StatelessWidget {
           ),
         ],
       ),
+      body: ChatSection(),
     );
   }
 }

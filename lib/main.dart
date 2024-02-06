@@ -1,10 +1,11 @@
 import 'package:fl_chat_app/pages/conversation_page.dart';
 import 'package:flutter/material.dart';
-import 'package:sendbird_sdk/sendbird_sdk.dart';
+import 'package:sendbird_sdk/sendbird_sdk.dart' as Sendbird;
 
-void main() {
-  final sendbird = SendbirdSdk(
-      appId: "BC823AD1-FBEA-4F08-8F41-CF0D9D280FBF",
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Sendbird.SendbirdSdk(
+      appId: 'BC823AD1-FBEA-4F08-8F41-CF0D9D280FBF',
       apiToken: 'f93b05ff359245af400aa805bafd2a091a173064');
 
   runApp(const MyApp());
