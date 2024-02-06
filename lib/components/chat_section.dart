@@ -1,6 +1,8 @@
 import 'package:fl_chat_app/components/chat_box.dart';
+import 'package:fl_chat_app/components/user_message.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+// import 'package:sendbird_sdk/sendbird_sdk.dart';
 
 class ChatSection extends StatefulWidget {
   const ChatSection({super.key});
@@ -16,22 +18,9 @@ class _ChatSectionState extends State<ChatSection> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Expanded(
-            child: Column(children: [
-          ChatBox(),
-          SizedBox(
-            height: 10,
-          ),
-          ChatBox(),
-          SizedBox(
-            height: 10,
-          ),
-          ChatBox(),
-          SizedBox(
-            height: 10,
-          ),
-          ChatBox(),
-        ])),
+        Expanded(
+          child: Text(""),
+        ),
         Container(
           padding: const EdgeInsets.all(8),
           margin: EdgeInsets.only(bottom: 12),
@@ -77,6 +66,7 @@ class _ChatSectionState extends State<ChatSection> {
                         ),
                       ),
                     ),
+                    //button for sending message
                     GestureDetector(
                       onTap: () {},
                       child: Container(

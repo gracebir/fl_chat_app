@@ -1,7 +1,10 @@
+import 'package:fl_chat_app/models/message_model.dart';
 import 'package:flutter/material.dart';
 
 class ChatBox extends StatelessWidget {
-  const ChatBox({super.key});
+  MessageModel message;
+
+  ChatBox({super.key, required this.message});
 
   @override
   Widget build(BuildContext context) {
@@ -29,20 +32,21 @@ class ChatBox extends StatelessWidget {
               decoration: BoxDecoration(
                   color: Color(0xff1A1A1A),
                   borderRadius: BorderRadius.circular(5)),
-              child: const Column(
+              child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "목이길어슬픈기린",
-                    style: TextStyle(color: Color(0xffADADAD), fontSize: 14),
+                    message.name,
+                    style:
+                        const TextStyle(color: Color(0xffADADAD), fontSize: 14),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 8,
                   ),
                   Text(
-                    "오늘 저녁 식사 같이 하실 여성분? 제가 삽니다",
-                    style: TextStyle(color: Colors.white, fontSize: 16),
+                    message.message,
+                    style: const TextStyle(color: Colors.white, fontSize: 16),
                   )
                 ],
               ),
@@ -50,9 +54,9 @@ class ChatBox extends StatelessWidget {
             const SizedBox(
               height: 5,
             ),
-            const Text(
-              "3분 전",
-              style: TextStyle(fontSize: 12, color: Color(0xff9C9CA3)),
+            Text(
+              message.timestamp,
+              style: const TextStyle(fontSize: 12, color: Color(0xff9C9CA3)),
             )
           ],
         )
